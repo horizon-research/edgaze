@@ -14,7 +14,7 @@ In the main directory, this repo contains the methods that we propose in [IEEE V
 
 For more details about how to train the eye segmentation networks and ROI prediction network, please checkout the links below:
 * [Efficient Eye segmentation]()
-* [ROI prediction network]()
+* [ROI prediction network](https://github.com/horizon-research/edgaze/tree/main/train_roi_prediction): go to directory `train_roi_prediction.`
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Pytorch                   : conda install pytorch torchvision torchaudio cpuonly
 keras
 matplotlib                : conda install -c conda-forge matplotlib
 ```
-You also need Facebook OpenEDS sequential dataset, [openEDS](https://research.fb.com/programs/openeds-2020-challenge/).
+You also need Facebook OpenEDS sequential dataset, [openEDS](https://research.fb.com/programs/openeds-2020-challenge/). We also provide post-processed OpenEDS dataset which contains ground truth to be used for training. Please checkout this [Box folder](https://rochester.box.com/s/vwiiv4ahe6hrftf8lbulpdwxefngudeo) to download.
 
 ### Usage
 
