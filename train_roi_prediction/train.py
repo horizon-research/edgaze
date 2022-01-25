@@ -97,6 +97,12 @@ if __name__ == '__main__':
         for batch_idx, data in enumerate(dataloader):
             event_img, edge_img, labels, prev_bboxs, event_path = data
 
+            # load to targeted device
+            event_img = event_img.to(device)
+            edge_img = edge_img.to(device)
+            labels = labels.to(device)
+            prev_bboxs = prev_bboxs.to(device)
+
             # zero the parameter gradients
             optimizer.zero_grad()
 
