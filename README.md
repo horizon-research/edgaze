@@ -1,12 +1,20 @@
 # Real Time Gaze Tracking with Event Driven Eye Segmentation
 
-This will contain the code for the IEEE VR 2021 paper Real Time Gaze Tracking with Event Driven Eye Segmentation.
+This will contain the code for the IEEE VR 2022 paper Real Time Gaze Tracking with Event Driven Eye Segmentation.
 
 
 This project borrows ideas from other projects:
 * [DeepVOG](https://github.com/pydsgz/DeepVOG): This is a glint-free gaze estimation pipeline to track eye movements.
 * [RIT-Net](https://github.com/AayushKrChaudhary/RITnet): This is an eye segmentation pipeline.
 * [v2e](https://github.com/SensorsINI/v2e): This is a image to event camera simulator framework.
+
+## What's in it
+
+In the main directory, this repo contains the methods that we propose in [IEEE VR 2022](https://www.cs.rochester.edu/horizon/pubs/vr22.pdf). We propose an efficient way to predict region-of-interests (ROIs) for continuous eye tracking and reduce the average eye tracking execution time up to 5 times. To run our code, please follow the instructions below.
+
+For more details about how to train the eye segmentation networks and ROI prediction network, please checkout the links below:
+* [Efficient Eye segmentation]()
+* [ROI prediction network]()
 
 ## Prerequisites
 
