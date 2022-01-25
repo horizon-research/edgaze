@@ -27,16 +27,16 @@ class BBoxPredictor(object):
             input_width=640,
             input_height=400
     ):
-    """Init.
+        """Init.
 
-        Args:
-            scaledown: int, the dimension scale down number
-            preview: bool, whether preview the segmentation result.
-            density_threshold: the threshold to determine whether performing 
-                               DNN eye segmentation on current input image
-            input_width: input image width
-            input_height: input image height
-    """
+            Args:
+                scaledown: int, the dimension scale down number
+                preview: bool, whether preview the segmentation result.
+                density_threshold: the threshold to determine whether performing 
+                                   DNN eye segmentation on current input image
+                input_width: input image width
+                input_height: input image height
+        """
         super(BBoxPredictor, self).__init__()
         self.scaledown = scaledown
         self.density_threshold = density_threshold

@@ -27,7 +27,7 @@ import torch
 FULL_DENSITY = 100
 
 
-class SmartCameraFilter(object):
+class Framework(object):
     def __init__(
         self,
         model_name,
@@ -168,7 +168,7 @@ class SmartCameraFilter(object):
 
         if self.preview:
             comb = numpy.hstack((img_no_resize/255., filter_result/4))
-            cv2.imshow("warpped & imference", comb)
+            cv2.imshow("warpped & inference", comb)
             cv2.waitKey(30)
 
         self.warp_record.write("%f %s\n" % (density, able_warp))

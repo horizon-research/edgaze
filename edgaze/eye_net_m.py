@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
+One variant of our eye segmentation network
+
+@author: Yu Feng
 """
+
 import torch
 import math
 import torch.nn as nn
