@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 This is simplified event generator to generate events between two 
 temporally-adjacent images.
@@ -7,7 +8,7 @@ temporally-adjacent images.
 """
 
 import cv2
-import numpy as np
+import numpy
 import os
 
 COLOR_MAX = 255
@@ -40,15 +41,15 @@ class SimpleEmulator(object):
         """
         # blur the image first
         curr_frame = cv2.blur(curr_frame, (self.blur_size, self.blur_size))
-        clipped_curr_frame = np.clip(curr_frame, self.clip_val, COLOR_MAX)
+        clipped_curr_frame = numpy.clip(curr_frame, self.clip_val, COLOR_MAX)
 
         events = []
         diff = None
 
         if self.clipped_prev_frame is not None:
             diff = clipped_curr_frame - self.clipped_prev_frame
-            ratio_frame = np.abs(diff)/self.clipped_prev_frame
-            diff = np.clip(ratio_frame, self.ratio, 1) - self.ratio
+            ratio_frame = numpy.abs(diff)/self.clipped_prev_frame
+            diff = numpy.clip(ratio_frame, self.ratio, 1) - self.ratio
             
             for row in range(diff.shape[0]):
                 for col in range(diff.shape[1]):
@@ -58,7 +59,7 @@ class SimpleEmulator(object):
 
         self.clipped_prev_frame = clipped_curr_frame
 
-        events == np.array(events)
+        events == numpy.array(events)
 
         return events, diff
 

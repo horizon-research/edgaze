@@ -60,6 +60,7 @@ class SmartCameraFilter(object):
             threshold_ratio: the threshold ratio to activate a event
             density_threshold: the threshold to determine whether performing 
                                DNN eye segmentation on current input image
+            preview: bool, whether preview the segmentation result.
         """
 
         self.simple_emulator = emulator.SimpleEmulator(
