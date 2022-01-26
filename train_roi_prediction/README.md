@@ -1,12 +1,12 @@
 # ROI Prediction Network
 
-This directory contains the training script for the ROI predition network.
+This directory contains the training script for the ROI prediction network.
 
 ## Prerequisites
 
-Before running any code, make sure you download the preprocessed data into current directory. There are three important data.
-* [eye segmentation data mask](https://rochester.box.com/s/y6ryd043x3y1kvsnwlkhssoo42je4eem): this contains the eye segmentation masks which is used to extract edge info.
-* [event iamge data](https://rochester.box.com/s/vbu9f40yu1h580zhp811j9fx38luw2ee): this contains preprocessed event images.
+Before running any code, make sure you download the preprocessed data into current directory. There are three important data sources.
+* [eye segmentation data mask](https://rochester.box.com/s/y6ryd043x3y1kvsnwlkhssoo42je4eem): this contains the eye segmentation masks which are used to extract edge info.
+* [event image data](https://rochester.box.com/s/vbu9f40yu1h580zhp811j9fx38luw2ee): this contains preprocessed event images.
 * [bbox ground truth](https://rochester.box.com/s/a2cfyyg2gc9v1d0bevqxfxfm6cd7ipvx): this is the ground truth for this task.
 
 ## Training
