@@ -13,8 +13,8 @@ This project borrows ideas from other projects:
 In the main directory, this repo contains the methods that we propose in [IEEE VR 2022](https://www.cs.rochester.edu/horizon/pubs/vr22.pdf). We propose an efficient way to predict region-of-interests (ROIs) for continuous eye tracking and reduce the average eye tracking execution time up to 5 times. To run our code, please follow the instructions below.
 
 For more details about how to train the eye segmentation networks and ROI prediction network, please checkout the links below:
-* [Efficient Eye segmentation]()
-* [ROI prediction network](https://github.com/horizon-research/edgaze/tree/main/train_roi_prediction): go to directory `train_roi_prediction.`
+* [Efficient Eye segmentation](https://github.com/horizon-research/edgaze/tree/main/train_eye_net) go to directory `train_eye_net`
+* [ROI prediction network](https://github.com/horizon-research/edgaze/tree/main/train_roi_prediction): go to directory `train_roi_prediction`
 
 ## Prerequisites
 
