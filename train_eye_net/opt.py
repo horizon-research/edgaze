@@ -9,7 +9,7 @@ def parse_args():
     # Optimization: General
     parser.add_argument('--bs', type=int, default = 4)
     parser.add_argument('--epochs', type=int,help='Number of epochs',default= 200)
-    parser.add_argument('--workers', type=int,help='Number of workers',default=8)
+    parser.add_argument('--workers', type=int,help='Number of workers',default=4)
     parser.add_argument('--model', help='model name',default='eye_net')
     parser.add_argument('--evalsplit', help='eval spolit',default='val')
     parser.add_argument('--lr', type=float,default= 1e-3,help='Learning rate')
@@ -21,7 +21,7 @@ def parse_args():
     parser.add_argument('--savemodel',action='store_true',help='checkpoint save the model')
     parser.add_argument('--testrun', action='store_true', help='test run with few dataset')
     parser.add_argument('--expname', type=str, default='eye_net', help='extra explanation of the method')
-    parser.add_argument('--useGPU', type=str, default=False, help='Set it as False if GPU is unavailable')
+    parser.add_argument('--useGPU', default=False, action="store_true", help='Set it as False if GPU is unavailable')
    
     # parse 
     args = parser.parse_args()

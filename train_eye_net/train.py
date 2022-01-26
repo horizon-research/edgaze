@@ -92,7 +92,7 @@ if __name__ == '__main__':
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', patience=5)
 
     criterion = CrossEntropyLoss2d()
-    criterion_DICE = GeneralizedDiceLoss(softmax=True, reduction=True)
+    criterion_DICE = GeneralizedDiceLoss(softmax=True, reduction=True, useGPU=args.useGPU)
     criterion_SL = SurfaceLoss()
     
     Path2file = args.dataset

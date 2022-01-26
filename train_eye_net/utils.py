@@ -59,11 +59,12 @@ class GeneralizedDiceLoss(nn.Module):
     # Author: Rakshit Kothari
     # Input: (B, C, ...)
     # Target: (B, C, ...)
-    def __init__(self, epsilon=1e-5, weight=None, softmax=True, reduction=True):
+    def __init__(self, epsilon=1e-5, weight=None, softmax=True, reduction=True, useGPU=True):
         super(GeneralizedDiceLoss, self).__init__()
         self.epsilon = epsilon
         self.weight = []
         self.reduction = reduction
+        self.useGPU = useGPU
         if softmax:
             self.norm = nn.Softmax(dim=1)
         else:
@@ -73,15 +74,23 @@ class GeneralizedDiceLoss(nn.Module):
 
         # Rapid way to convert to one-hot. For future version, use functional
         Label = (np.arange(4) == target.cpu().numpy()[..., None]).astype(np.uint8)
-        target = torch.from_numpy(np.rollaxis(Label, 3,start=1)).cuda()
+        if self.useGPU:
+            target = torch.from_numpy(np.rollaxis(Label, 3,start=1)).cuda()
+        else:
+            target = torch.from_numpy(np.rollaxis(Label, 3,start=1))
 
         assert ip.shape == target.shape
         ip = self.norm(ip)
 
         # Flatten for multidimensional data
-        ip = torch.flatten(ip, start_dim=2, end_dim=-1).cuda().to(torch.float32)
-        target = torch.flatten(target, start_dim=2, end_dim=-1).cuda().to(torch.float32)
-        
+        if self.useGPU:
+            ip = torch.flatten(ip, start_dim=2, end_dim=-1).cuda().to(torch.float32)
+            target = torch.flatten(target, start_dim=2, end_dim=-1).cuda().to(torch.float32)
+        else:
+            ip = torch.flatten(ip, start_dim=2, end_dim=-1).to(torch.float32)
+            target = torch.flatten(target, start_dim=2, end_dim=-1).to(torch.float32)
+
+
         numerator = ip*target
         denominator = ip + target
 
