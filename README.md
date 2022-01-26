@@ -31,7 +31,7 @@ Pytorch                   : conda install pytorch torchvision torchaudio cpuonly
 keras
 matplotlib                : conda install -c conda-forge matplotlib
 ```
-You also need Facebook OpenEDS sequential dataset, [openEDS](https://research.fb.com/programs/openeds-2020-challenge/). We also provide post-processed OpenEDS dataset which contains ground truth to be used for training. Please checkout this [Box folder](https://rochester.box.com/s/vwiiv4ahe6hrftf8lbulpdwxefngudeo) to download.
+You also need Facebook OpenEDS sequential dataset, [openEDS](https://research.fb.com/programs/openeds-2020-challenge/). We also provide post-processed OpenEDS dataset which contains ground truth to be used for training. Please checkout this [Box folder](https://rochester.box.com/s/vwiiv4ahe6hrftf8lbulpdwxefngudeo) to download or the download [link](https://rochester.box.com/s/y6ryd043x3y1kvsnwlkhssoo42je4eem).
 
 ### Usage
 
