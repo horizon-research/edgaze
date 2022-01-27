@@ -1,16 +1,8 @@
 # Real Time Gaze Tracking with Event Driven Eye Segmentation
 
-This will contain the code for the IEEE VR 2022 paper Real Time Gaze Tracking with Event Driven Eye Segmentation.
-
-
-This project borrows ideas from other projects:
-* [DeepVOG](https://github.com/pydsgz/DeepVOG): This is a glint-free gaze estimation pipeline to track eye movements.
-* [RIT-Net](https://github.com/AayushKrChaudhary/RITnet): This is an eye segmentation pipeline.
-* [v2e](https://github.com/SensorsINI/v2e): This is a image to event camera simulator framework.
-
 ## What's in it
 
-In the main directory, this repo contains the methods that we propose in [IEEE VR 2022](https://www.cs.rochester.edu/horizon/pubs/vr22.pdf). We propose an efficient way to predict region-of-interests (ROIs) for continuous eye tracking and reduce the average eye tracking execution time up to 5 times. To run our code, please follow the instructions below.
+In the main directory, this repo contains the methods that we propose in our IEEE VR 2022 paper [Real Time Gaze Tracking with Event Driven Eye Segmentation](https://www.cs.rochester.edu/horizon/pubs/vr22.pdf). We propose a very lightweight method to predict region-of-interests (ROIs) for continuous eye tracking and reduce the average eye tracking execution time up to 5 times. The To run our code, please follow the instructions below.
 
 For more details about how to train the eye segmentation networks and ROI prediction network, please checkout the links below:
 * [Efficient Eye segmentation](https://github.com/horizon-research/edgaze/tree/main/train_eye_net) go to directory `train_eye_net`
@@ -31,9 +23,10 @@ Pytorch                   : conda install pytorch torchvision torchaudio cpuonly
 keras
 matplotlib                : conda install -c conda-forge matplotlib
 ```
-You also need Facebook OpenEDS sequential dataset, [openEDS](https://research.fb.com/programs/openeds-2020-challenge/). We also provide post-processed OpenEDS dataset which contains ground truth to be used for training. Please checkout this [Box folder](https://rochester.box.com/s/vwiiv4ahe6hrftf8lbulpdwxefngudeo) to download or the download [link](https://rochester.box.com/s/y6ryd043x3y1kvsnwlkhssoo42je4eem).
 
-### Usage
+One of the evaluation datasets we use is the Facebook OpenEDS 2020 dataset [openEDS](https://research.fb.com/programs/openeds-2020-challenge/) (Track-2). The dataset has sequential eye sequences, but do not have the ground truth. We generate the ground truth labels, and package them with the dataset. You can download the dataset at this [Box folder](https://rochester.box.com/s/vwiiv4ahe6hrftf8lbulpdwxefngudeo) or simply use this [link](https://rochester.box.com/s/y6ryd043x3y1kvsnwlkhssoo42je4eem). See the paper for how we generate the ground truth labels.
+
+## Usage
 
 The easiest way to run our code is to via `main.py`:
 ```
@@ -135,4 +128,3 @@ To run one sequence with full-frame image with `eye_net_m`,
 			--device cpu \
 			--preview
 ```
-
