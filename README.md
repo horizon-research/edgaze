@@ -25,6 +25,9 @@ matplotlib                : conda install -c conda-forge matplotlib
 ```
 
 One of the evaluation datasets we use is the Facebook OpenEDS 2020 dataset [openEDS](https://research.fb.com/programs/openeds-2020-challenge/) (Track-2). The dataset has sequential eye sequences, but do not have the ground truth. We generate the ground truth labels, and package them with the dataset. You can download the dataset at this [Box folder](https://rochester.box.com/s/vwiiv4ahe6hrftf8lbulpdwxefngudeo) or simply use this [link](https://rochester.box.com/s/y6ryd043x3y1kvsnwlkhssoo42je4eem). See the paper for how we generate the ground truth labels.
+* [Image Data](https://rochester.box.com/s/y6ryd043x3y1kvsnwlkhssoo42je4eem): which contains the sequential image data and ground truth.
+* [Bounding Box](https://rochester.box.com/s/a2cfyyg2gc9v1d0bevqxfxfm6cd7ipvx): which contains the bounding box to train the bounding box predictor.
+* [Events](https://rochester.box.com/s/vbu9f40yu1h580zhp811j9fx38luw2ee): whcih contains the emulated event maps.
 
 ## Usage
 
