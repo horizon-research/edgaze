@@ -2,9 +2,9 @@
 
 ## What's in it
 
-In the main directory, this repo contains the methods that we propose in our IEEE VR 2022 paper [Real Time Gaze Tracking with Event Driven Eye Segmentation](https://horizon-lab.org/pubs/vr22.pdf). We propose a very lightweight method to predict region-of-interests (ROIs) for continuous eye tracking and reduce the average eye tracking execution time up to 5 times. The To run our code, please follow the instructions below.
+In the main directory, this repo contains the methods that we propose in our IEEE VR 2022 paper [Real Time Gaze Tracking with Event Driven Eye Segmentation](https://horizon-lab.org/pubs/vr22.pdf). We propose a very lightweight method to predict region-of-interests (ROIs) for continuous eye tracking and reduce the average eye tracking execution time by up to 5 times. Our implementation heavily borrows the code from [DeepVoG](https://github.com/pydsgz/DeepVOG). To run our code, please follow the instructions below.
 
-For more details about how to train the eye segmentation networks and ROI prediction network, please checkout the links below:
+For more details about how to train the eye segmentation networks and ROI prediction network, please check out the links below:
 * [Efficient Eye segmentation](https://github.com/horizon-research/edgaze/tree/main/train_eye_net) go to directory `train_eye_net`
 * [ROI prediction network](https://github.com/horizon-research/edgaze/tree/main/train_roi_prediction): go to directory `train_roi_prediction`
 
